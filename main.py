@@ -131,7 +131,7 @@ def inner_display():
             iner.table(df)
             delete = st.button(
                     "Delete Data table", on_click=lambda: delete_content('temp_data.csv'))
-            file=open('temp_data.csv','r+')
+            file=open('temp_data.csv','r+',encoding='utf-8')
             st.download_button("Dowbload Your data",
                        data=file,
                        file_name="Passwords.csv")
