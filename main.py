@@ -83,7 +83,7 @@ def create_temp_csv(data):
     temp_file_path = temp_file.name
 
     # Write the data to the temporary CSV file
-    with open(temp_file_path, 'w', newline='') as file:
+    with open(temp_file_path, 'w', newline='',encoding='utf-8') as file:
         fieldnames = ["Domain", "Username", "Password", "Password_Length"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
@@ -106,7 +106,7 @@ def save(data):
     file_path = "temp_data.csv"
     write_fieldnames(file_path)
 
-    with open(file_path, 'a+', newline='') as file:
+    with open(file_path, 'a+', newline='',encoding='utf-8') as file:
         thewriter = csv.writer(file)
         thewriter.writerow([
             "www." + data['Domain'] + ".com",
@@ -141,7 +141,7 @@ def inner_display():
 
 def write_fieldnames(file_path):
     if empty_data(file_path):
-        with open(file_path, 'a+', newline='') as file:
+        with open(file_path, 'a+', newline='',encoding='utf-8') as file:
             fieldnames = ["Domain", "Username", "Password", "Password_Length"]
             thewriter = csv.DictWriter(file, fieldnames=fieldnames)
             thewriter.writeheader()
@@ -159,7 +159,7 @@ def display():
     temp_file_path = "temp_data.csv"
     if not os.path.exists(temp_file_path):
         # Create a new temporary file if it doesn't exist
-        with open(temp_file_path, 'w', newline='') as file:
+        with open(temp_file_path, 'w', newline='',encoding='utf-8') as file:
             pass  # Create an empty file
 
     # Create two columns to display the forms side by side
