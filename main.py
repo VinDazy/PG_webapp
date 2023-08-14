@@ -174,7 +174,7 @@ def display():
 
     # Define the "Data Manipulation" form button inside the second column
     with col2:
-        st.subheader("Data Manipulation")
+        st.subheader("Data Vizualisation")
         inner_display()
 
 
