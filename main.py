@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import tempfile
 
-st.set_page_config(layout="wide", page_icon="🔐")
+st.set_page_config(page_title="Password Generator",layout="wide", page_icon="🔐")
 st.title("Password generator")
 
 st.markdown("""
